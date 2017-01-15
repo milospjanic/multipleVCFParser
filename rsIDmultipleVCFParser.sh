@@ -24,6 +24,7 @@ EOL
 
 vcf=$(ls *SNP_INDEL.vcf)
 
+#run awk script with $2 provided as vcf file
 awk -f script.awk $vcf
 
-#run awk script with $2 provided as vcf file
+rm script.awk
