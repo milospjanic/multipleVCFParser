@@ -1,7 +1,7 @@
 # rsIDmultipleVCFParser
 
 
-#Usage
+##Usage
 <pre>
 mpjanic@valkyr:/home/odin/mpjanic/WGS/HCASMC/vcf_2$ ls -ltrh *SNP_INDEL.vcf
 -rwxrwxrwx 1 mpjanic users  1.2G Jul  7  2015 1410UNHS-0007_1848_1_SNP_INDEL.vcf
