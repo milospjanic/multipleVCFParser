@@ -1,5 +1,7 @@
 # rsIDmultipleVCFParser
 
+This is a bash/awk script that will parse multiple individual vcf file and for your input SNP of interest output a table with VCF tags including genotype GT, genotype quality GQ, allele depth AD etc, values for VCF tags, sample names/IDs from the VCF file, input SNP ID. Useful to assess genotype and quality for a particular SNP of interest.
+
 
 ##Usage
 <pre>
