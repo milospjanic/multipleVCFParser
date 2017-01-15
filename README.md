@@ -35,10 +35,11 @@ awk -f script.awk $vcf
 
 rm script.awk
 ```
-
+List of input vcf files \*SNP_INDEL.vcf
 ##Usage
 <pre>
-mpjanic@valkyr:/home/odin/mpjanic/WGS/HCASMC/vcf_2$ ls -ltrh *SNP_INDEL.vcf
+ls -ltrh *SNP_INDEL.vcf
+
 -rwxrwxrwx 1 mpjanic users  1.2G Jul  7  2015 1410UNHS-0007_1848_1_SNP_INDEL.vcf
 -rwxrwxrwx 1 mpjanic users 1018M Jul  7  2015 1410UNHS-0007_2102_SNP_INDEL.vcf
 -rwxrwxrwx 1 mpjanic users  989M Jul  7  2015 1410UNHS-0007_2228_1_SNP_INDEL.vcf
@@ -57,4 +58,30 @@ mpjanic@valkyr:/home/odin/mpjanic/WGS/HCASMC/vcf_2$ ls -ltrh *SNP_INDEL.vcf
 -rwxrwxrwx 1 mpjanic users  950M Jul  9  2015 1503UNHX-0001_1060602_4_SNP_INDEL.vcf
 -rwxrwxrwx 1 mpjanic users  956M Jul  9  2015 1503UNHX-0001_1596_5p_SNP_INDEL.vcf
 -rwxrwxrwx 1 mpjanic users  830M Jul 10  2015 1411KHX-0032_2135-5_SNP_INDEL.vcf
+</pre>
+
+Samples that contain input SNP ID will output vcf tags and values, while samples that do not contain input SNP ID will output blank after sample ID.
+
+<pre>
+chmod 755 rsIDmultipleVCFParser.sh
+./rsIDmultipleVCFParser.sh rs200751313
+
+SNP: rs200751313	Sample:	3101801-2-3	Tags: GT:GQ:GQX:DP:DPF:AD	Values: 1/1:33:33:12:3:0,12
+SNP: rs200751313	Sample:	1848_1
+SNP: rs200751313	Sample:	2102	Tags: GT:GQ:GQX:DP:DPF:AD	Values: 1/1:132:132:45:3:0,45
+SNP: rs200751313	Sample:	2228_1	Tags: GT:GQ:GQX:DP:DPF:AD	Values: 1/1:48:48:17:2:0,17
+SNP: rs200751313	Sample:	2305_3	Tags: GT:GQ:GQX:DP:DPF:AD	Values: 0/1:55:55:30:0:5,25
+SNP: rs200751313	Sample:	2435_5
+SNP: rs200751313	Sample:	2999_1	Tags: GT:GQ:GQX:DP:DPF:AD	Values: 1/1:87:87:30:0:0,30
+SNP: rs200751313	Sample:	3003_5	Tags: GT:GQ:GQX:DP:DPF:AD	Values: 1/1:54:54:19:1:0,19
+SNP: rs200751313	Sample:	1522-2
+SNP: rs200751313	Sample:	2105-6P	Tags: GT:GQ:GQX:DP:DPF:AD	Values: 0/1:33:33:43:1:7,36
+SNP: rs200751313	Sample:	2135-5	Tags: GT:GQ:GQX:DP:DPF:AD	Values: 0/1:37:37:14:2:2,12
+SNP: rs200751313	Sample:	2139-1	Tags: GT:GQ:GQX:DP:DPF:AD	Values: 1/1:90:90:31:3:0,31
+SNP: rs200751313	Sample:	2463-4
+SNP: rs200751313	Sample:	24635-1P	Tags: GT:GQ:GQX:DP:DPF:AD	Values: 0/1:77:77:24:2:6,18
+SNP: rs200751313	Sample:	317155-2	Tags: GT:GQ:GQX:DP:DPF:AD	Values: 1/1:75:75:26:0:0,26
+SNP: rs200751313	Sample:	1060602_4	Tags: GT:GQ:GQX:DP:DPF:AD	Values: 1/1:87:87:30:3:0,30
+SNP: rs200751313	Sample:	1596_5p	Tags: GT:GQ:GQX:DP:DPF:AD	Values: 1/1:66:66:23:2:0,23
+SNP: rs200751313	Sample:	2989_3	Tags: GT:GQ:GQX:DP:DPF:AD	Values: 1/1:93:93:32:2:0,32
 </pre>
