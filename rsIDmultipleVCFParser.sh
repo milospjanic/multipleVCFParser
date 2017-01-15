@@ -18,9 +18,6 @@ FNR==1 {printf "\nSNP: $1\t"}
 
 /$1/ {for(i = 1; i <= NF; i++)if(\$i~/GT:GQ/){s=\$(i+1);printf "\tTags:";printf" "\$i"\tValues: "s}}
 
-/$1/ {for(i = 1; i <= NF; i++)if(\$i~/GT:GQ/){s=\$(i+1);printf "\tGenotype:";gsub(/:.*/,"",s); print}}
-
-
 EOL
 
 #list vcf files 
