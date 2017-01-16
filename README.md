@@ -17,11 +17,11 @@ FNR==1 {printf "\nSNP: $1\t"}
 
 #find line with #CHROM, if field contains FORMAT print next field i.e. sample name 
 
-/#CHROM/ {for(i = 1; i <= NF; i++)if(\$i~/FORMAT/){s=\$(i+1);printf"Sample:\t";printf s}} 
+/#CHROM/ {for(i = 1; i <= NF; i++) if(\$i~/FORMAT/) {s=\$(i+1); printf"Sample:\t"; printf s}} 
 
 #find line with rs ID, if field contains GT:GQ print this field and next field
 
-/$1/ {for(i = 1; i <= NF; i++)if(\$i~/GT:GQ/){s=\$(i+1);printf "\tTags:";printf" "\$i"\tValues: "s}}
+/$1/ {for(i = 1; i <= NF; i++) if(\$i~/GT:GQ/) {s=\$(i+1); printf "\tTags:"; printf" "\$i"\tValues: "s}}
 
 EOL
 
